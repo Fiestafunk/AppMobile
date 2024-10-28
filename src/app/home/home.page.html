@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title [@titleAnimation]="'in'">SkeletonAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <h3 class="welcome-title">¡Bienvenido!</h3>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.nombre" [readonly]="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <h5 class="section-title">Información Adicional</h5>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.nombre"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Apellido</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.apellido"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label>Nivel de Educación</ion-label>
+          <ion-select [(ngModel)]="userData.nivelEducacion">
+            <ion-select-option value="Educación Preescolar">Educación Preescolar</ion-select-option>
+            <ion-select-option value="Educación Básica">Educación Básica</ion-select-option>
+            <ion-select-option value="Educación Media">Educación Media</ion-select-option>
+            <ion-select-option value="Educación Superior">Educación Superior</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <mat-form-field appearance="fill">
+          <mat-label>Fecha de Nacimiento</mat-label>
+          <input matInput [matDatepicker]="picker" [(ngModel)]="userData.fechaNacimiento">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block" (click)="clear()">Limpiar</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" (click)="show()">Mostrar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="footer-text">App desarrollada por Matías Jorquera Valdés.</p>
+  </ion-toolbar>
+</ion-footer>

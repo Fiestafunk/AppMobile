@@ -35,3 +35,81 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+/* Estilo global para centrar el contenido */
+.header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-grid {
+    --ion-grid-padding: 0;
+    --ion-grid-column-padding: 8px;
+}
+
+ion-row {
+    margin-bottom: 20px;
+}
+
+ion-item {
+    margin-bottom: 0;
+    /* Elimina márgenes adicionales dentro de cada ion-item */
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+ion-content {
+    padding: 16px;
+}
+
+.welcome-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 16px 0px;
+    padding-top: 20px;
+    color: var(--ion-color-primary);
+    /* Usar el color principal definido en tu tema */
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 16px 0;
+    color: var(--ion-color-medium);
+    /* Usar un color suave o neutro del tema */
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-alert .alert-wrapper {
+    background-color: #f9f9f9;
+    /* Fondo claro */
+    border-radius: 15px;
+    color: #333;
+    /* Texto oscuro */
+}
+
+.custom-alert .alert-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.custom-alert .alert-message {
+    font-size: 16px;
+    color: #555;
+}
+
+.custom-alert .alert-button {
+    color: #3880ff;
+    /* Color del botón OK */
+}
