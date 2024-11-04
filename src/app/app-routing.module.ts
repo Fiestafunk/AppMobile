@@ -14,7 +14,26 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
-  }
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then(m => m.RegistroPageModule)
+  },
+  {
+    path: 'nosotros',
+    loadChildren: () => import('./nosotros/nosotros.module').then(m => m.NosotrosPageModule)
+  },
+  {
+    path: 'contactanos',
+    loadChildren: () => import('./contactanos/contactanos.module').then(m => m.ContactanosPageModule)
+  },  {
+    path: 'despachos',
+    loadChildren: () => import('./despachos/despachos.module').then( m => m.DespachosPageModule)
+  },
+
+
+
+
 ];
 
 @NgModule({

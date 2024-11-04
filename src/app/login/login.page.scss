@@ -1,0 +1,185 @@
+.logo {
+    -webkit-animation: rotate-center 1s ease-in-out 1s 2 alternate-reverse;
+    animation: rotate-center 1s ease-in-out 1s 2 alternate-reverse;
+    border-radius: 10%;
+
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+ion-content {
+    --background: none;
+    /* Elimina cualquier fondo global */
+    background-image: url('../../assets/img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+
+ion-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Fondo semitransparente */
+    backdrop-filter: blur(5px);
+    /* Opcional: agrega un efecto de desenfoque detrás */
+    box-shadow: none;
+    border-radius: 5%;
+    margin: 10% auto;
+    width: 90%;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+}
+
+.login-container img {
+    width: 60%;
+}
+
+ion-card ion-input {
+    --background: transparent;
+    /* Fondo transparente */
+    color: #3e3a3a;
+    /* Color de texto en naranja oscuro */
+}
+
+ion-card input {
+    background-color: transparent;
+    /* Fondo transparente para navegadores que no usan variables CSS */
+    color: #3e3a3a;
+    /* Color de texto en naranja oscuro */
+}
+
+
+ion-card ion-label {
+    --background: transparent;
+    /* Fondo transparente */
+    color: #3e3a3a;
+    /* Color de texto en naranja oscuro */
+}
+
+ion-card label {
+    background-color: transparent;
+    /* Fondo transparente para navegadores que no usan variables CSS */
+    color: #D35400;
+    /* Color de texto en naranja oscuro */
+}
+
+
+ion-card ion-item {
+    --background: transparent;
+    /* Fondo transparente */
+    color: #D35400;
+    /* Color de texto en naranja oscuro */
+}
+
+ion-card ion-button.login-button {
+    --background: #000000;
+    /* Fondo en naranja oscuro */
+    color: white;
+    /* Texto en blanco para buen contraste */
+}
+
+.register-button {
+    color: #3e3a3a;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+
+.forgot-password {
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+
+    a {
+        color: #3e3a3a;
+        text-decoration: none;
+    }
+}
+
+.login-container img {
+    width: 50%;
+}
+
+.logo {
+    -webkit-animation: rotate-center 1s ease-in-out 1s 2 alternate-reverse;
+    animation: rotate-center 1s ease-in-out 1s 2 alternate-reverse;
+    border-radius: 5%;
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+ion-footer {
+    background: transparent;
+    /* Hace el fondo del footer transparente */
+}
+
+ion-toolbar {
+    display: flex;
+    justify-content: center;
+    /* Centra el texto horizontalmente */
+    align-items: center;
+    /* Centra el texto verticalmente */
+    background: transparent;
+    /* Hace el fondo del toolbar transparente */
+    min-height: 60px;
+    /* Ajusta la altura mínima si es necesario */
+}
+
+.footer-text {
+    color: #ffffff;
+    /* Cambia el color del texto si el fondo es oscuro */
+    font-size: 14px;
+    /* Ajusta el tamaño de la fuente */
+    text-align: center;
+}

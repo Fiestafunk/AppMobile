@@ -1,76 +1,54 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title [@titleAnimation]="'in'">SkeletonAPP</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="mainMenu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-    <h3 class="welcome-title">¡Bienvenido!</h3>
-    <ion-row>
-      <ion-col size="12">
-        <ion-item>
-          <ion-label position="floating">Usuario</ion-label>
-          <ion-input type="text" [(ngModel)]="userData.nombre" [readonly]="true"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-    <h5 class="section-title">Información Adicional</h5>
-    <ion-row>
-      <ion-col size="12">
-        <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
-          <ion-input type="text" [(ngModel)]="userData.nombre"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="12">
-        <ion-item>
-          <ion-label position="floating">Apellido</ion-label>
-          <ion-input type="text" [(ngModel)]="userData.apellido"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-    <ion-row>
-      <ion-col size="12">
-        <ion-item>
-          <ion-label>Nivel de Educación</ion-label>
-          <ion-select [(ngModel)]="userData.nivelEducacion">
-            <ion-select-option value="Educación Preescolar">Educación Preescolar</ion-select-option>
-            <ion-select-option value="Educación Básica">Educación Básica</ion-select-option>
-            <ion-select-option value="Educación Media">Educación Media</ion-select-option>
-            <ion-select-option value="Educación Superior">Educación Superior</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-col>
-    </ion-row>
 
-    <ion-row>
-      <ion-col size="12">
-        <mat-form-field appearance="fill">
-          <mat-label>Fecha de Nacimiento</mat-label>
-          <input matInput [matDatepicker]="picker" [(ngModel)]="userData.fechaNacimiento">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-      </ion-col>
-    </ion-row>
+  <!-- Imagen de usuario y mensaje de bienvenida -->
+  <div class="info-usuario">
+    <img src="../../assets/img/Logo_blanco.png" class="icono" />
+    <h2><strong>{{ bienvenidos }}</strong><br /> {{ email }}</h2>
+  </div>
 
-    <ion-row>
-      <ion-col size="6">
-        <ion-button expand="block" (click)="clear()">Limpiar</ion-button>
-      </ion-col>
-      <ion-col size="6">
-        <ion-button expand="block" (click)="show()">Mostrar</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="titulo">
+    <h2>Productos</h2>
+  </div>
+
+  <ion-card>
+    <img src="../../assets/img/saco25.jpg" />
+    <ion-card-header>
+      <ion-card-title>Sustrato 25 litros.</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Saco de 25 litros, perfecto para transplantar a tu pequeña planta en crecimiento.
+    </ion-card-content>
+    <ion-button expand="block" class="boton-agregar">Agregar al carrito</ion-button>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/img/saco50.jpg" />
+    <ion-card-header>
+      <ion-card-title>Sustrato 50 litros.</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Saco de 50 litros, ideal para transplantar tu planta de mediano tamaño.
+    </ion-card-content>
+    <ion-button expand="block" class="boton-agregar">Agregar al carrito</ion-button>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/img/saco100.jpg" />
+    <ion-card-header>
+      <ion-card-title>Sustrato 100 litros.</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Saco de 100 litros, magnifico para transplantar a tierra a tu gran planta favorita.
+    </ion-card-content>
+    <ion-button expand="block" class="boton-agregar">Agregar al carrito</ion-button>
+  </ion-card>
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <p class="footer-text">App desarrollada por Matías Jorquera Valdés.</p>
-  </ion-toolbar>
-</ion-footer>
