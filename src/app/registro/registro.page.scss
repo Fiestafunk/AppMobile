@@ -39,14 +39,19 @@
 }
 
 ion-card {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
     /* Fondo semitransparente */
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     /* Opcional: agrega un efecto de desenfoque detrás */
     box-shadow: none;
     border-radius: 5%;
     margin: 10% auto;
     width: 90%;
+}
+
+ion-card-content {
+    color: #fff;
+    /* Cambia el color del texto si es necesario para mejor contraste */
 }
 
 .logo-container {
